@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/style/style.css">
+     <title>Jogo da Memória</title>
+</head>
+<body>
+     <audio id="music" controls="controls" autoplay="autoplay" loop="loop" src="./assets/audios/cavaleiros_game.mp3"></audio>
+    
+     <main class="memory-game">
+          <div id="timer"></div>
+            <div class="menu">
+               <div class="card" data-card="peixes">
+                    <img src="./assets/menu/afrodite_de_peixes.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="leao">
+                    <img src="./assets/menu/ailolia_de_leao.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="sagitario">
+                    <img src="./assets/menu/aiolos_de_sagitario.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="touro">
+                    <img src="./assets/menu/aldebaram_de_touro.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="aquario">
+                    <img src="./assets/menu/camus_de_aquario.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="libra">
+                    <img src="./assets/menu/dohko_de_libra.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="cisne">
+                    <img src="./assets/menu/hyoga_de_cisne.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="fenix">
+                    <img src="./assets/menu/ikki_de_fenix.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="cancer">
+                    <img src="./assets/menu/mascara_da_morte_cancer.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="escorpiao">
+                    <img src="./assets/menu/milo_de_escorpiao.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="aries" >
+                    <img src="./assets/menu/mu_de_aries.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="pegasus">
+                    <img src="./assets/menu/seya_de_pegasus.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="virgem">
+                    <img src="./assets/menu/shaka_de_virgem.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="dragao">
+                    <img src="./assets/menu/shiryu_de_dragao.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="andromeda">
+                    <img src="./assets/menu/shun_de_andromeda.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="capricornio">
+                    <img src="./assets/menu/shura_de_capricornio.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="peixes">
+                    <img src="./assets/menu/afrodite_de_peixes.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="leao">
+                    <img src="./assets/menu/ailolia_de_leao.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="sagitario">
+                    <img src="./assets/menu/aiolos_de_sagitario.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="touro">
+                    <img src="./assets/menu/aldebaram_de_touro.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="aquario">
+                    <img src="./assets/menu/camus_de_aquario.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="libra">
+                    <img src="./assets/menu/dohko_de_libra.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="cisne">
+                    <img src="./assets/menu/hyoga_de_cisne.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="fenix">
+                    <img src="./assets/menu/ikki_de_fenix.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="cancer">
+                    <img src="./assets/menu/mascara_da_morte_cancer.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="escorpiao">
+                    <img src="./assets/menu/milo_de_escorpiao.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="aries">
+                    <img src="./assets/menu/mu_de_aries.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="pegasus">
+                    <img src="./assets/menu/seya_de_pegasus.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="virgem">
+                    <img src="./assets/menu/shaka_de_virgem.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="dragao">
+                    <img src="./assets/menu/shiryu_de_dragao.webp" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="andromeda">
+                    <img src="./assets/menu/shun_de_andromeda.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+               <div class="card" data-card="capricornio">
+                    <img src="./assets/menu/shura_de_capricornio.jpeg" alt="face da carta" class="card-front">
+                    <img src="./assets/menu/fundo_card.webp" alt="fundo da carta" class="card-back">
+               </div>
+          </div>
+       </main>
+     <script src="./assets/script/script.js" defer></script>
+</body>
+</html>
